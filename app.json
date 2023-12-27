@@ -15,8 +15,7 @@
       "index",
       "inline"
     ],
-    "website": "https://github.com/TeamHMT/Auto-search-tamil-bot",
-    "repository": "https://github.com/TeamHMT/Auto-search-tamil-bot",
+    "repository": "https://github.com/Bebsti/Delta-Filter-bot.git",
     "env": {
         "BOT_TOKEN": {
             "description": "Your bot token.",
