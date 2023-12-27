@@ -1,7 +1,7 @@
 if [ -z $UPSTREAM_REPO ]
 then
   echo "Cloning main Repository"
-  git clone https://github.com/SamarITS/Rocorr.git /Rocorr
+  git clone https://github.com/Bebsti/Delta-Filter-bot.git /Rocorr
 else
   echo "Cloning Custom Repo from $UPSTREAM_REPO "
   git clone $UPSTREAM_REPO /Rocorr
