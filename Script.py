@@ -4,7 +4,7 @@ class script(object):
     <code>🛰 I am the Latest Advanced Auto Filter Bot made by © signature98
     </code>
     
-    <b>#Auto #Manual #Global #filter #earnMoney #fileStore #AutoDelete #UrlSHortner #FreetoUse 🌷</b> """
+<b>#Auto #Manual #Global #filter #earnMoney #fileStore #AutoDelete #UrlSHortner #FreetoUse 🌷</b> """
     HELP_TXT = """<b>What I can Do 👇</b>"""
 
     ABOUT_TXT = """<b>Free to Use ... © Signature98 </b>"""
