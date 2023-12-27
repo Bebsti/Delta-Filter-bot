@@ -1429,8 +1429,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "extra":
         buttons = [[
-            InlineKeyboardButton('❄ Back ❄', callback_data='help'),
-            InlineKeyboardButton('Admin 🌎', callback_data='admin')
+            InlineKeyboardButton('❄ Back ❄', callback_data='help')
         ]]
         await client.edit_message_media(
             query.message.chat.id, 
@@ -1442,18 +1441,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             text=script.EXTRAMOD_TXT,
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
-        )
-     elif query.data == "admin":
-        buttons = [[
-            InlineKeyboardButton('❄ Back ❄', callback_data='extra')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=script.ADMIN_TXT,
-            reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
-        )    
-    
+        )   
     elif query.data == "store_file":
         buttons = [[
             InlineKeyboardButton('❄ Back ❄', callback_data='help')
