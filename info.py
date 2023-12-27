@@ -21,7 +21,7 @@ BOT_TOKEN = environ.get('BOT_TOKEN', "6737043514:AAEd3vvPwKz6xGY-QL57lgpg9jGqvhy
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 
-PICS = (environ.get('PICS', 'https://telegra.ph/file/738eabb610f959c9e8fe7.jpg')).split() #SAMPLE PIC
+PICS = (environ.get('PICS', 'https://telegra.ph/file/0a8eb70159adcc30b9f75.jpg')).split() #SAMPLE PIC
 NOR_IMG = environ.get("NOR_IMG", "https://graph.org/file/e0770294280f17df23911.jpg")
 MELCOW_VID = environ.get("MELCOW_VID", "https://graph.org/file/5f4126f0a68828857243f.mp4")
 SPELL_IMG = environ.get("SPELL_IMG", "https://graph.org/file/f6466cc7f17f54ab0ff3e.jpg")
@@ -49,16 +49,16 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
 VERIFY = bool(environ.get('VERIFY', False))
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'tnshort.net')
-SHORTLINK_API = environ.get('SHORTLINK_API', '283e2f93efb84bbbbad920e445e0283470513ed6')
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'moneykamalo.com')
+SHORTLINK_API = environ.get('SHORTLINK_API', '232783a78e0d2313f433159fcb0887c72ece8aee')
 IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', False))
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
 MAX_B_TN = environ.get("MAX_B_TN", "10")
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
 PORT = environ.get("PORT", "8080")
-GRP_LNK = environ.get('GRP_LNK', 'https://t.me/RequestGroupTamil')
-CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/DeltaFiles')
-TUTORIAL = environ.get('TUTORIAL', 'https://t.me/VikramAllUpdate/21')
+GRP_LNK = environ.get('GRP_LNK', 'https://t.me/wwm_request_group')
+CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/world_wide_movies')
+TUTORIAL = environ.get('TUTORIAL', 'https://t.me/Drago_mafia')
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
 MSG_ALRT = environ.get('MSG_ALRT', '𝐖𝐡𝐚𝐭 𝐀𝐫𝐞 𝐘𝐨𝐮 𝐋𝐨𝐨𝐤𝐢𝐧𝐠 𝐀 ?')
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001959981512'))
