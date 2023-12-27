@@ -22,13 +22,16 @@ BATCH_FILES = {}
 @Client.on_message(filters.command("start") & filters.incoming)
 async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
-        buttons = [[
-                    InlineKeyboardButton('🧪 Add Me To Your Group', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+        buttons =[[
+                   InlineKeyboardButton('🧪 Add Me To Your Group', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
-                    InlineKeyboardButton('☘️ Main Hub', url=CHNL_LNK),
+                    InlineKeyboardButton('Earn Money💸', callback_data="shortlink_info"),
                     InlineKeyboardButton('📲 Request Guoup ', url=GRP_LNK)
                 ],[
-                    InlineKeyboardButton('🪲 Search', switch_inline_query_current_chat='')
+                    InlineKeyboardButton('Help🪛', callback_data='help'),
+                    InlineKeyboardButton('About✏️', callback_data='about')
+                ],[
+                   InlineKeyboardButton('☘️ Main Hub', url=CHNL_LNK)
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply(script.START_TXT.format(message.from_user.mention if message.from_user else message.chat.title, temp.U_NAME, temp.B_NAME), reply_markup=reply_markup, disable_web_page_preview=True)
@@ -45,14 +48,13 @@ async def start(client, message):
         buttons = [[
                    InlineKeyboardButton('🧪 Add Me To Your Group', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
-                    InlineKeyboardButton('☘️ Main Hub', url=CHNL_LNK),
+                    InlineKeyboardButton('Earn Money💸', callback_data="shortlink_info"),
                     InlineKeyboardButton('📲 Request Guoup ', url=GRP_LNK)
                 ],[
-                    InlineKeyboardButton('Earn Money💸', callback_data="shortlink_info"),
                     InlineKeyboardButton('Help🪛', callback_data='help'),
                     InlineKeyboardButton('About✏️', callback_data='about')
                 ],[
-                   InlineKeyboardButton('🪲 Search', switch_inline_query_current_chat='')
+                   InlineKeyboardButton('☘️ Main Hub', url=CHNL_LNK)
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         m=await message.reply_sticker("CAACAgUAAxkBAAIItmWL8BfSntRUSFF_0B4t4_f-fkqmAALODAACA1hhVIgjqLjnMdv7MwQ") 
@@ -94,17 +96,16 @@ async def start(client, message):
         )                  
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
-        buttons =  [[
+        buttons = [[
                    InlineKeyboardButton('🧪 Add Me To Your Group', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
-                    InlineKeyboardButton('☘️ Main Hub', url=CHNL_LNK),
+                    InlineKeyboardButton('Earn Money💸', callback_data="shortlink_info"),
                     InlineKeyboardButton('📲 Request Guoup ', url=GRP_LNK)
                 ],[
-                    InlineKeyboardButton('Earn Money💸', callback_data="shortlink_info"),
                     InlineKeyboardButton('Help🪛', callback_data='help'),
                     InlineKeyboardButton('About✏️', callback_data='about')
                 ],[
-                   InlineKeyboardButton('🪲 Search', switch_inline_query_current_chat='')
+                   InlineKeyboardButton('☘️ Main Hub', url=CHNL_LNK)
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)      
         await message.reply_photo(
