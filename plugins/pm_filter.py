@@ -1249,14 +1249,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
                    InlineKeyboardButton('🧪 Add Me To Your Group', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
-                    InlineKeyboardButton('☘️ Main Hub', url=CHNL_LNK),
+                    InlineKeyboardButton('Earn Money💸', callback_data="shortlink_info"),
                     InlineKeyboardButton('📲 Request Guoup ', url=GRP_LNK)
                 ],[
-                    InlineKeyboardButton('Earn Money💸', callback_data="shortlink_info"),
                     InlineKeyboardButton('Help🪛', callback_data='help'),
                     InlineKeyboardButton('About✏️', callback_data='about')
                 ],[
-                   InlineKeyboardButton('🪲 Search', switch_inline_query_current_chat='')
+                   InlineKeyboardButton('☘️ Main Hub', url=CHNL_LNK)
                   ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -1431,6 +1430,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('❄ Back ❄', callback_data='help')
         ]]
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.EXTRAMOD_TXT,
