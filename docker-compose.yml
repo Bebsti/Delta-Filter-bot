@@ -1,6 +1,7 @@
 version: "3.8"
+
 services:
-   worker:
+  worker:
     build: .
     environment:
       BOT_TOKEN: $BOT_TOKEN
@@ -12,4 +13,4 @@ services:
       DATABASE_NAME: $DATABASE_NAME
       DATABASE_URI: $DATABASE_URI
       HEROKU_API_KEY: $HEROKU_API_KEY
-  restart: on-failure
+    restart: on-failure
